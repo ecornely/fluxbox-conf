@@ -1,3 +1,16 @@
 [begin] (fluxbox)
-[include] (/etc/X11/fluxbox/fluxbox-menu)
+  [submenu] (Applications) {}
+    [exec] (terminal) { x-terminal-emulator -T "Bash" -e /bin/bash --login} <>
+    [exec] (gmrun) {/usr/bin/gmrun} <>
+    [exec] (chromium) {chromium} <>
+    [exec] (iceweasel) {iceweasel} <>
+  [end]
+  [config] (Configuration)
+  [submenu] (Styles) {}
+    [stylesdir] (~/.fluxbox/styles)
+  [end]
+  [workspaces] (Workspaces)
+  [reconfig] (Reconfigure)
+  [restart] (Restart)
+  [exit] (Exit)
 [end]
