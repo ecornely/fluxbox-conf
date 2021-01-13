@@ -1,9 +1,10 @@
 [begin] (fluxbox)
   [submenu] (Applications) {}
-    [exec] (terminal) { x-terminal-emulator -T "Bash" -e /bin/bash --login} <>
+    [exec] (terminal) {konsole} <>
     [exec] (gmrun) {/usr/bin/gmrun} <>
-    [exec] (chromium) {chromium} <>
-    [exec] (iceweasel) {iceweasel} <>
+    [exec] (chrome) {google-chrome} <>
+    [exec] (VisualStudio Code) {code} <>
+    [exec] (Slack desktop) {slack} <>
   [end]
   [config] (Configuration)
   [submenu] (Styles) {}

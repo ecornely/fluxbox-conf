@@ -14,7 +14,15 @@ xmodmap "/home/corne/.Xmodmap"
 # wmnd &
 # wmsmixer -w &
 # idesk &
-#
+
+#### TODO ####
+# start klipper and see if it can be used under fluxbox
+klipper &
+slack &
+ksnip &
+gkrellm -w &
+
+
 # Debian-local change:
 #   - fbautostart has been added with a quick hack to check to see if it
 #     exists. If it does, we'll start it up by default.

@@ -1,4 +1,14 @@
 [app] (name=fbrun)
-  [Position]	(WINCENTER)	{0 0}
+  [Position]	(CENTER)	{0 0}
   [Layer]	{2}
+[end]
+[app] (name=nxplayer.bin) (class=Nxplayer.bin)
+  [Workspace]	{3}
+  [Fullscreen]	{yes}
+[end]
+[app] (name=slack) (class=Slack) (role=browser-window)
+  [Workspace]	{1}
+[end]
+[app] (name=pavucontrol) (class=Pavucontrol)
+  [Position]	(UPPERLEFT)	{37% 22%}
 [end]
