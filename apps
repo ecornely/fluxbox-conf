@@ -7,7 +7,7 @@
   [Fullscreen]	{yes}
 [end]
 [app] (name=slack) (class=Slack) (role=browser-window)
-  [Workspace]	{1}
+  [Workspace]	{4}
 [end]
 [app] (name=pavucontrol) (class=Pavucontrol)
   [Position]	(UPPERLEFT)	{37% 22%}

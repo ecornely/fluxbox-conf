@@ -49,7 +49,9 @@ Mod1 F1 :Exec konsole
 # open a dialog to run programs
 Mod1 F2 :Exec gmrun
 Mod4 R :Exec gmrun
+Mod4 E :Exec dolphin
 Mod4 Shift A :Exec pavucontrol
+Mod4 L :Exec xscreensaver-command -lock
 
 # volume settings, using common keycodes
 # if these don't work, use xev to find out your real keycodes
@@ -64,11 +66,20 @@ Mod1 F5 :Kill
 # exit fluxbox
 Control Mod1 Delete :Exit
 
-Mod4 Up :Maximize
+Mod4 Up :MacroCmd {SetXProp _FLUXBOX_CUSTOM_POSITION=MAX} {Maximize}
+
+Mod4 Left :If {Matches (@_FLUXBOX_CUSTOM_POSITION=LEFT)} {MacroCmd {SetHead 2} {Moveto 959 0} {SetXProp _FLUXBOX_CUSTOM_POSITION=RIGHT}} {MacroCmd {Moveto 0 0} {ResizeTo 958 1058} {SetXProp _FLUXBOX_CUSTOM_POSITION=LEFT}}
+Mod4 Right :If {Matches (@_FLUXBOX_CUSTOM_POSITION=RIGHT)} {MacroCmd {SetHead 1} {Moveto 0 0} {SetXProp _FLUXBOX_CUSTOM_POSITION=LEFT}} {MacroCmd {Moveto 959 0} {ResizeTo 958 1058} {SetXProp _FLUXBOX_CUSTOM_POSITION=RIGHT}}
+
+#Mod4 Left :MacroCmd {Moveto 0 0} {ResizeTo 958 1058}
+#Mod4 Right :MacroCmd {Moveto 959 0} {ResizeTo 958 1058}
+
+#Mod4 Shift Left :If {Matches (HEAD=1)} {SetHead 2}
+#Mod4 Shift Right :If {Matches (HEAD=2)} {SetHead 1}
+
 #Mod4 Left :PrevWorkspace
-Mod4 Left :MacroCmd {Moveto 0 0} {ResizeTo 958 1058}
-Mod4 Right :MacroCmd {Moveto 959 0} {ResizeTo 958 1058}
 #Mod4 Right :NextWorkspace
+
 Mod4 M :ShowDesktop
 
 Mod1 1 :Workspace 1

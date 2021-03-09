@@ -15,12 +15,21 @@ xmodmap "/home/corne/.Xmodmap"
 # wmsmixer -w &
 # idesk &
 
-#### TODO ####
-# start klipper and see if it can be used under fluxbox
+# Try to fix dolphin not showin icons
+export QT_QPA_PLATFORMTHEME="qt5ct"
+export GTK_THEME="Breeze-Dark"
+export XDG_CURRENT_DESKTOP=fluxbox
+
+# Applications at startup
 klipper &
 slack &
 ksnip &
+kalarm &
 gkrellm -w &
+/usr/bin/xscreensaver -nosplash &
+/home/corne/.screenlayout/eric-pc.sh &
+#/usr/lib/notification-daemon/notification-daemon &
+/usr/lib/mate-notification-daemon/mate-notification-daemon &
 
 
 # Debian-local change:

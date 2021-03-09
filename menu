@@ -5,6 +5,8 @@
     [exec] (chrome) {google-chrome} <>
     [exec] (VisualStudio Code) {code} <>
     [exec] (Slack desktop) {slack} <>
+    [exec] (GTK change theme) {gtk-chtheme} <>
+    [exec] (KDE settings) {systemsettings5} <>
   [end]
   [config] (Configuration)
   [submenu] (Styles) {}
